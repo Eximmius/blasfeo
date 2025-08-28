@@ -1293,7 +1293,7 @@ install(TARGETS blasfeo EXPORT blasfeoConfig
 	RUNTIME DESTINATION bin)
 
 
-install(EXPORT blasfeoConfig DESTINATION cmake)
+install(EXPORT blasfeoConfig DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/cmake/blasfeo FILE blasfeoConfig.cmake)
 
 file(GLOB_RECURSE BLASFEO_HEADERS "include/*.h")
 install(FILES ${BLASFEO_HEADERS} DESTINATION ${BLASFEO_HEADERS_INSTALLATION_DIRECTORY})
